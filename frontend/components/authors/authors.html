@@ -1,0 +1,31 @@
+<div class=" row">
+    <div class="col-xs-12 quote-box">
+        <!--    <div ng-repeat="Quote in quotesList track by $index" class="col-xs-3">-->
+
+        <div class="picturebox">
+            <label for="s">Explore. Discover. Share. Collect.</label>
+            <input class="authorsinput" placeholder="Search author" type="text" ng-model="authorsearched">
+            <button class="btn-info authorsearch" ng-click="searchauthor(authorsearched)">Search</button>
+        </div>
+
+        <div ng-repeat="Quote in HttpService.quotesList track by $index">
+
+            <div class="panel panel-default col-xs-10">
+                <div class="panel-body col-xs-8">
+                    <div col-xs-9 class="quote-box1">“{{Quote.quote}}”
+                        <div class="pull-right name">-{{Quote.author}}</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 col-xs-offset-1">
+                    <div class="button-container">
+                        <button class="glyphicon glyphicon-heart btn-danger love" aria-hidden="true" ng-click="upvote (Quote, $index)">
+                            {{Quote.loveNumber}}
+                            <button class="deletebutton btn-info trash" ng-click="deleteQuote(Quote, $index)"><span class="glyphicon glyphicon-trash .btn-md" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+
+            </div>
+            <!--            <pre>{{Quote.author}}</pre>-->
+        </div>
+    </div>

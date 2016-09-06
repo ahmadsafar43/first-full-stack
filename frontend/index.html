@@ -1,0 +1,67 @@
+<html lang="en" ng-app="quotesApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+<header class="site-header" role="banner">
+    <h1 class="header">QUOTES</h1></header>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2 fixedmenu">
+                <div class="row">
+                    <div class="col-xs-9 menu">
+
+
+
+                        <div class="menu-item"><a href="#/quotes"><span> <img src="img/glyph.png" class="imgauthors"></span><span class="quotetext">QUOTES</span> </a></div>
+
+                        <div class="menu-item"><a href="#/authors"><span> <img src="img/authors.png" class="imgauthors"></span><span>AUTHORS</span></a></div>
+
+                        <div class="menu-item"><a href="#/pictures"><span> <img src="img/pictures.png" class="imgpics"> </span> <span> PICTURES</span></a></div>
+
+                        <div class="menu-item"><a href="#/topics"><span> <img src="img/topics.png" class="topic"> </span><span class="topictext">TOPICS</span></a></div>
+
+                        <div class="menu-item">
+                            <a href="#/lists"> <span> <img src="img/list.png" class="lists"> </span><span style="display: block" class="liststext"> LISTS</span></a>
+                        </div>
+
+                        <div class="menu-item"><a href="#/search"><span><img src="img/search.png" class="search"></span><span>SEARCH</span></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-10">
+
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="js/services/httpService.js"></script>
+    <script src="components/quotes/quotes.js"></script>
+    <script src="components/authors/authors.js"></script>
+    <script>
+  (function () {
+    var cx = '011755297898787436681:iemx_ebjrte';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+</body>
+
+</html>
